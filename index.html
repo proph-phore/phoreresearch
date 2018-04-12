@@ -27,7 +27,6 @@
                     <td>Avail Supply</td>
                     <td>Total Supply</td>
                     <td>Max Supply</td>
-                    <td>Total Market Cap</td>
                     <td>Market Cap (USD)</td>
                 </thead>
                 <tbody>
@@ -45,10 +44,9 @@
                         <td v-bind:style="getColor(coin.percent_change_7d)">
                             <span v-if="coin.percent_change_7d > 0">+</span>{{ coin.percent_change_7d }}%
                         </td>
-                        <td>{{ coin.available_supply | number }}</td>
+                        <td>{{ coin.available_supply | currency }}</td>
                         <td>{{ coin.total_supply | currency }}</td>
                         <td>{{ coin.max_supply | currency }}</td>
-                        <td>{{ coin.TotalVolume24H | currency }}</td>
                         <td>{{ coin.market_cap_usd | currency }}</td>
                     </tr>
                 </tbody>
