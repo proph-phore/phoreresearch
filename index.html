@@ -34,7 +34,7 @@
                         <td>{{ coin.rank }}</td>
                         <td><img v-bind:src="getCoinImage(coin.symbol)"> {{ coin.name }}</td>
                         <td>{{ coin.symbol }}</td>
-                        <td>{{ coin.price_btc | currency }}</td>
+                        <td>{{ coin.price_btc }}</td>
                         <td v-bind:style="getColor(coin.percent_change_1h)">
                             <span v-if="coin.percent_change_1h > 0">+</span>{{ coin.percent_change_1h }}%
                         </td>
