@@ -15,9 +15,23 @@
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+   import axios from "axios";
+
+       export default {
+           name: 'app',
+           data() {
+               return {
+                   coins: [],
+                   input: {
+                       amount: 1,
+                       cryptocurrency: "bitcoin"
+                   },
+                   specific_coin_amount: 0
+               }
+           },
+           mounted() {},
+           methods: {}
+       }
 </script>
 
 <style>
